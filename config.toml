@@ -259,7 +259,7 @@ googleAnalytics = "UA-83914032-1"
 			warning = "Please enter your email address."
 
 		[params.contact.form.phone]
-			text = "Your Phone *"
+			text = "Your Phone"
 			warning = "Please enter your phone number."
 
 		[params.contact.form.message]
