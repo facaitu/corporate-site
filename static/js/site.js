@@ -61,12 +61,13 @@ $(document).ready(function() {
       email: email
     });
     e.preventDefault();
+    // Close Checkout on page navigation:
+    $(window).on('popstate', function() {
+      handler.close();
+    });
   });
 
-  // Close Checkout on page navigation:
-  $(window).on('popstate', function() {
-    handler.close();
-  });
+
 });
 
 function submitSubscription(form) {

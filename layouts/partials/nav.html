@@ -31,9 +31,35 @@
                 {{ end }}
 
                 {{ if .Site.Params.portfolio.enable }}
-                <li>
-                    <a class="page-scroll" href="#portfolio">{{ with .Site.Params.navigation.portfolio }}{{ . | markdownify }}{{ end }}</a>
+                <!-- Don't show this dropdown on mobile because the scrollspy doesn't work well with submenus on mobile -->
+                <li class="dropdown no-mobile">
+                  <a href="#portfolio" class="page-scroll dropdown-toggle bg-darkest-gray" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ with .Site.Params.navigation.portfolio }}{{ . | markdownify }}{{ end }} <span class="caret"></span></a>
+                  <ul class="dropdown-menu bg-darkest-gray">
+                    {{ range .Site.Data.products }}
+                    {{ if eq .active true }}
+                    <li><a href="{{ .Site.BaseURL }}product/{{ .name }}">{{ with .name }}{{ . | markdownify }}{{ end }}</a></li>
+                    {{ else }}
+                    <li><a href="#">{{ with .name }}{{ . | markdownify }}{{ end }}</a></li>
+                    {{ end }}
+                    {{ end }}
+                  </ul>
                 </li>
+                <!-- Don't show this on desktop, because this menu is not using scrollspy -->
+                <li class="dropdown no-desktop">
+                  <a href="#" class="dropdown-toggle bg-darkest-gray" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ with .Site.Params.navigation.portfolio }}{{ . | markdownify }}{{ end }} <span class="caret"></span></a>
+                  <ul class="dropdown-menu bg-darkest-gray">
+                    {{ range .Site.Data.products }}
+                    {{ if eq .active true }}
+                    <li><a href="{{ .Site.BaseURL }}product/{{ .name }}">{{ with .name }}{{ . | markdownify }}{{ end }}</a></li>
+                    {{ else }}
+                    <li><a href="#">{{ with .name }}{{ . | markdownify }}{{ end }}</a></li>
+                    {{ end }}
+                    {{ end }}
+                  </ul>
+                </li>
+                <!-- <li>
+                    <a class="page-scroll" href="#portfolio">{{ with .Site.Params.navigation.portfolio }}{{ . | markdownify }}{{ end }}</a>
+                </li> -->
                 {{ end }}
 
                 {{ if .Site.Params.about.enable }}

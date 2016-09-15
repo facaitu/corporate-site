@@ -124,8 +124,7 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-xl,
 .btn-xl:active,
-.btn-xl.active,
-.open, .dropdown-toggle.btn-xl,
+.btn-xl.active, .dropdown-toggle.btn-xl,
 .btn-xl:focus {
     padding: 10px 20px;
     border-color: #BD1B21;
@@ -142,8 +141,7 @@ fieldset[disabled] .btn-primary.active {
 @media(min-width:768px) {
   .btn-xl,
   .btn-xl:active,
-  .btn-xl.active,
-  .open, .dropdown-toggle.btn-xl,
+  .btn-xl.active, .dropdown-toggle.btn-xl,
   .btn-xl:focus {
       padding: 20px 40px;
       border-color: #BD1B21;
@@ -801,11 +799,10 @@ footer {
     text-align: center;
 }
 
-footer span.copyright {
+footer div.copyright {
     text-transform: uppercase;
     text-transform: none;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 40px;
 }
 
 footer ul.quicklinks {
@@ -813,7 +810,6 @@ footer ul.quicklinks {
     text-transform: uppercase;
     text-transform: none;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 40px;
 }
 
 ul.social-buttons {
@@ -1087,6 +1083,58 @@ div .price {
 
 .subscription-modal form {
   text-align: left;
+}
+
+/* Submenu on mobile devices */
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-nav .open .dropdown-menu {
+  color: white;
+  background-color: transparent;
+}
+
+/* Main navbar dropdown styling for mobile */
+.navbar-default .open {
+  padding: 0px;
+  border-color: #BD1B21;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media(min-width:768px) {
+  /* Main navbar dropdown styling for desktop */
+  .navbar-default .open {
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 0px;
+    border-color: #BD1B21;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  /* On desktop show submenu when we hover */
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+   display: block;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .no-mobile {
+    display: none !important;
+  }
+}
+
+@media(min-width: 768px) {
+  .no-desktop {
+    display: none !important;
+  }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0)
