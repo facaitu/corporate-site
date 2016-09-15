@@ -60,13 +60,13 @@ googleAnalytics = "UA-83914032-1"
 
     # postpended links
     [[menu.postpend]]
-        url = "http://3dsim.github.io"
-        name = "Software Blog"
-        weight = 10
-    [[menu.postpend]]
         url = "https://www.youtube.com/channel/UCvaLAp2CWIPqNUFs4nfa9ew"
         name = "Research"
         weight = 5
+    [[menu.postpend]]
+        url = "https://login.3dsim.com"
+        name = "Login"
+        weight = 20
 
 
 	# Hero section
@@ -269,8 +269,9 @@ googleAnalytics = "UA-83914032-1"
 
 	# Footer section
 	[params.footer]
-        enable = true
-		copyright = "All rights reserved - 2016"
+    enable = true
+		copyright = "&#169;Copyright 2016 3DSIM LLC, All Rights Reserved"
+    contact = "<i class=\"fa fa-map-marker\"></i> 1794 Olympic Parkway, Park City, UT 84098 <br/><i class=\"fa fa-phone\"></i> (435) 602-4033"
 
 		# [[params.footer.social]]
 		# 	icon = "fa-twitter"
@@ -286,8 +287,4 @@ googleAnalytics = "UA-83914032-1"
 
 		[[params.footer.quicklinks]]
 			text = "Privacy Policy"
-			link = "#"
-
-		[[params.footer.quicklinks]]
-			text = "Terms of Use"
 			link = "#"
