@@ -1,4 +1,7 @@
 FEATURE LIST,exaSIM BASIC,exaSIM ADVANCED,exaSIM COMPLETE,exaSIM ENTERPRISE
+Auto-generated Supports (STL),x,x,x,x
+Distortion Trends (VTK),x,x,x,x
+Residual Stress Trends (VTK),x,x,x,x
 Uniform Assumed Strain,x,x,x,x
 Scan Pattern Dependent Strain,,x,x,x
 Thermal Strain,,,x,x
@@ -15,5 +18,5 @@ User-customized material assumptions ,x,x,x,x
 Thermophysical material database**,n/a,n/a,1,customizable
 Priority email support,,,,x
 Phone support,,,,x
-Onsite training,,,,x
-Dedicated technical success manager,,,,x
+Onsite training,,,,Available
+Dedicated technical success manager,,,,Available
