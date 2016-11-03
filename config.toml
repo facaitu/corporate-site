@@ -64,7 +64,7 @@ googleAnalytics = "UA-83914032-1"
         name = "Research"
         weight = 5
     [[menu.postpend]]
-        url = "https://login.3dsim.com"
+        url = "https://app.3dsim.com"
         name = "Login"
         weight = 20
 
