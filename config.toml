@@ -187,8 +187,8 @@ googleAnalytics = "UA-83914032-1"
 
 	# Team section
 	[params.team]
-        enable = true
-		title = "Our founders"
+        enable = false
+		title = "The 3DSIM Team"
 		subtitle = "Changing the simulation world from a little ski town."
     # TODO core beliefs here
 		description = ""
